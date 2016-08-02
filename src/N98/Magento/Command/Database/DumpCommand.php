@@ -284,6 +284,11 @@ HELP;
 
         $execs = array();
 
+        $dumpTables = array();
+        if (strlen($this->dbSettings['prefix'])) {
+
+        }
+
         $ignore = '';
         foreach (array_merge($excludeTables, $stripTables) as $tableName) {
             $ignore .= '--ignore-table=' . $this->dbSettings['dbname'] . '.' . $tableName . ' ';
